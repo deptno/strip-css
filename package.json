@@ -1,6 +1,6 @@
 {
   "name": "strip-css",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "♽ strip css for amp",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,6 @@
     "start": "tsnd --respawn src/index -o \"-ns$\" \"^fl\" ",
     "compile": "tsc",
     "prepare": "rimraf dist && tsc -p src",
-    "postpublish": "npm publish --ignore-scripts --@deptno:registry='https://registry.npmjs.org' --access public",
     "deploy": "npm publish",
     "test": "jest"
   },
