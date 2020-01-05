@@ -10,9 +10,11 @@ jobs:
       - uses: actions/checkout@v1
       - name: inject gpr token
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${GPR_TOKEN}" > .npmrc
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${GPR_TOKEN}" >> .npmrc
           echo "@deptno:registry=https://npm.pkg.github.com/" >> npmrc
         env:
-          GPR_TOKEN: ${{ secrets.GPR_TOKEN }}
+          GPR_TOKEN: ${{secrets.GPR_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
       - run: npm ci
       - run: npm publish

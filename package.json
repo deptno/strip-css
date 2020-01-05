@@ -1,7 +1,7 @@
 {
   "name": "strip-css",
-  "version": "0.0.0",
-  "description": "♽ strip css for AMP",
+  "version": "0.1.0",
+  "description": "♽ strip css for amp",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
@@ -15,7 +15,12 @@
     "deploy": "npm publish",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": [
+    "strip",
+    "omit",
+    "css",
+    "amp"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
