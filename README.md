@@ -7,13 +7,24 @@
 It is useful when you try to AMP. AMP restricts css size up to 50Kb, `strip-css` could help this.
 
 ## usage
+
+```shell script
+$ npx strip-css --help
+```
+
+use standard input
+```shell script
+cat input.css | npx strip-css -r [rule] -o [media query] > output.css
+```
+
+example
 ```shell script
 $ curl https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css | \
 npx strip-css \
- -o 'dark-' \
- -o '$fl-' \
- -o '-l$' \
- -o '-ns$' \
+ -r 'dark-' \
+ -r '$fl-' \
+ -r '-l$' \
+ -r '-ns$' \
 > dist.css
 
 rule 1688: 2113 - 425

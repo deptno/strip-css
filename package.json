@@ -1,6 +1,6 @@
 {
   "name": "strip-css",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "♽ strip css for amp",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
