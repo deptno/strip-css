@@ -1,0 +1,37 @@
+{
+  "name": "strip-css",
+  "version": "0.0.0",
+  "description": "♽ strip css for AMP",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "strip-css": "dist/index.js"
+  },
+  "scripts": {
+    "start": "tsnd --respawn src/index -o \"-ns$\" \"^fl\" ",
+    "compile": "tsc",
+    "prepare": "rimraf dist && tsc -p src",
+    "postpublish": "npm publish --ignore-scripts --@deptno:registry='https://registry.npmjs.org' --access public",
+    "deploy": "npm publish",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/css-tree": "^1.0.3",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^13.1.4",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "commander": "^4.0.1",
+    "css-tree": "^1.0.0-alpha.39",
+    "debug": "^4.1.1"
+  }
+}
