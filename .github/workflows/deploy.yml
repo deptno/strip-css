@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -12,7 +12,7 @@ jobs:
         run: |
           echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
           echo "//npm.pkg.github.com/:_authToken=${GPR_TOKEN}" >> .npmrc
-          echo "@deptno:registry=https://npm.pkg.github.com/" >> npmrc
+          echo "@deptno:registry=https://npm.pkg.github.com/" >> .npmrc
         env:
           GPR_TOKEN: ${{secrets.GPR_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
